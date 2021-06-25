@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+button {
+  height: 5rem;
+  background: #767676;
+  border-radius: 0.25rem;
+  padding: 0 1rem;
+  outline: 0;
+  border: 0;
+  color: #FFF;
+  transition: background-color 100ms ease-in-out;
+  cursor: pointer;
+  /*margin: 3px;*/
+  margin-top: 1px;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+th:hover {
+  background: #767676C0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+th.ascending::after {
+  position: absolute;
+  top: 2px;
+  content: '👇';
+  display: inline-block;
+  margin-left: 2em;
+  left: 74px;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+th.descending::after {
+  position: absolute;
+  top: 1px;
+
+  content: '☝️';
+  display: inline-block;
+  margin-left: 2em;
+  left: 74px;
+
+}
+td{
+ min-width: 120px;
+  border: 1px solid;
+}
+th{
+  position: relative;
+
+  border: solid 3px black;
+  min-width: 120px;
+
+  background: green;
   color: white;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+table {
+  border-spacing: 0;
+  border: 1px solid black;
+}
+input,select{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+input{
+  width: 130px;
+}
+#page-numbers {
+  list-style: none;
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#page-numbers > li {
+  margin-right: 0.3em;
+  color: white;
+  user-select: none;
+  cursor: pointer;
+  background-color: green;
 }
